@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+// for - loops through a block of code a number of times
+// for/in - loops through the properties of an object
+// for/of - loops through the values of an iterable object
+// while - loops through a block of code while a specified condition is true
+// do/while - also loops through a block of code while a specified condition is true
+
+
+
+
+        //  for of 
+        //acceder les element on arraye
+        const cars = ["BMW", "Volvo", "Mini"];
+        let texte = "";
+        for (let x of cars) {
+            text += x + "<br>";
+        }
+            // BMW
+            // Volvo
+            // Mini
+
+        
+
+
+
+
+        //for 
+        let i = 0;
+            let len = colors.length;
+            let text = "";
+            for (; i < len; ) {
+                text += cars[i] + "<br>";
+                i++;
+            }
+
+
+
+
+
+
+        //while
+        while (i < 10) {
+                text += "The number is " + i;
+                i++;
+        }
+
+
+
+
+
+
+
+        //label
+        let products=["Keyboard","Mouse","Pen","Pad","Monitor"];
+        let colors=["Red","Green","Black"];
+
+        mainLoop:for(leti=0;i<products.length;i++){
+            console.log(products[i]);
+            nestedLoop:for(letj=0;jkcolors.length;j++){
+            console.log(`--${colors[j]}`);
+            if(colors[j].length==="Green"){
+                break mainLoop;
+            };
+        };
+        }
+
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

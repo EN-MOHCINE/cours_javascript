@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+
+
+        //word to arraye
+        chain1="mossin"
+        chain1.split("")//[m,o,s,s,i,n]
+
+
+
+
+
+        //sentence to arraye 
+        chain1="mohssine ennefai 19 "
+        chain1.splite(" ")//[mohssin,ennefai,19]
+
+
+
+
+
+
+
+        // VIDEO 1
+            let myFriends=["Ahmed", "Mohamed", "Sayed", ["Marwan", "Ali"]];
+                console.log(`Hello ${myFriends[0]}`);//ahmed 
+                console.log(` Hello ${myFriends[2]}`);//sayed 
+                console.log(` ${myFriends[1][2]}`);//h
+                console.log(`Hello ${myFriends[3][1]}`);//ali
+                console.log(`${myFriends[3][1][2]}`);//i
+                console.log(myFriends);
+                myFriends[1]="Gamal";
+                console.log(myFriends);
+                                
+                myFriends[3]=["Sameh", "Ameer"];
+                console.log(myFriends);
+                consol.log(Array.isArray(myFriends))//true beacause myfiends is arraye 
+
+
+
+            // video 2 
+            let myFriends=["Ahmed", "Mohamed", "Sayed", "Alaa", "Osama"];
+
+            myFriends [myFriends.length] ="Gamal";// hade lenght dima kat stocke lina flkhr  ["Ahmed", "Mohamed", "Sayed", "Alaa", "Osama","gamal"]
+            myFriends [myFriends.length-1] ="Gamal";// hade lenght dima kat  bedel lina flkhr  ["Ahmed", "Mohamed", "Sayed", "Alaa", "gamal"]
+            myFriends.length=2//db lenght dyale arraye wla howa 2 not 5
+
+
+            
+
+            //video 3
+            let myliste=Array("mohamed ","mohcoine","toto ","tazi ","med ");
+            myliste.unshift("nabile","kamal");//add elemnt to first list 
+            myliste.push("jamal","brahime");//add elemnt to the end 
+            myliste.shift();//remove first elemnt from arraye 
+            myliste.pop();//remove lzst element from array
+                
+
+        
+
+            //video 4
+            var myliste1=Array("mohamed","med","reda","mohcine")
+            consol.log(myliste1.indexOf("mohamed"));// search from mohamed ila ga3ma kan returne -1
+            consol.log(myliste1.indexOf("mohamed",2));//galt lihe bda t9lb liya man 2  from end 
+            console.log(myliste.lastIndexOf("mohamed",-3))//kay search liya man lkhr dyale list
+            consol.log(myliste1.includes("ahmed",2));//search from ahmed is found returne true 
+
+
+
+
+            //video 5
+            let malist2=[-6,3,12,"moh","ene"]
+            consol.log(malist2.sort());// KAYDIRE ORDER  
+            consol.log(malist2.reverse( ));
+
+
+
+
+
+
+            //video 6 
+            let malist3=Array("ali","gamal","himmod","brahime","jamal","test1")
+            console.log(myFriends);
+            console.log(myFriends.slice()); //returne la lsit 
+            console.log(myFriends.slice(1)); // "gamal","himmod","brahime","jamal","test1"
+            console.log(myFriends.slice(1, 3));//gamal ,himmod
+            console.log(myFriends.slice(-3));//brahim,jamal,tets1
+            console.log(myFriends.slice(1, -2));//"himmod","brahime"
+            console.log(myFriends.slice(-4, -2));
+
+            //splice
+            const fruits = ["Banana", "Orange", "Apple", "Mango"]
+            // At position 2, add 2 elements: 
+            fruits.splice(2, 0, "Lemon", "Kiwi");//Banana,Orange,Lemon,Kiwi,Apple,Mango
+                        
+
+
+
+            //video 7
+                        let myFriends =["Ahmed", "Sayed", "Ali", "Osama", "Gamal", "Ameer"];
+                        let myNewFriends=["Samar", "Sameh"];
+                        let schoolFriends=["Haytham", "Shady"];
+                        let allFriends=myFriends.concat(myNewFriends, schoolFriends, "Gameel");
+                        //this concat is katjme3 lina bin listat 
+                        console.log(allFriends);
+
+                        //join()
+                        // The join() method returns an array as a string.
+                        // The join() method does not change the original array.
+                        const fruit = ["Banana", "Orange", "Apple", "Mango"];
+                        let text = fruits.join(" and ");//banana and orange ..............
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

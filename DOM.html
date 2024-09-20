@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>learn js dom</title>
+    </head>
+    <body>
+    <script>
+
+        let myIdelement=document.getElementById("name-id")//returne balise li fiha id name-id
+        let myTageElements=document.getElementsByTagName("p")//find to elements p returne list 
+            console.log(myTageElements[0].innerHTML="test")//first p print test ;innerhtml pour print
+        let myclasseElement=document.getElementsByClassName("name-class")//acceder par class element
+            console.log(myclasseElement[0])//acceder first element li ando class name-class
+        
+
+
+
+
+        //queryselector
+        let myQueryselectore=document.querySelector(".nameclass")//returne one  firs balise nameclass
+        let myQueryselectore1=document.querySelector("#name-id")//returne one  firs balise name-id
+        let myQueryselectore2=document.querySelector("p")//returne the first p element
+
+        //Queryselectoreall
+        let myQueryselectoreall=document.querySelectorAll(".nameclass")//returne list li andha ga3e class nameclass
+            console.log(myQueryselectoreall[0])//returne the first element in the list 
+        let myQueryselectoreall1=document.querySelectorall("p.example");//returne list andha ga3e doke p li andhom class exemple
+            console.log(myQueryselectoreall1[0])//returne first p li andha class exemple 
+
+
+        console.log(document.body)//returne body de la page
+        console.log(document.title)//returne title de la page
+        console.log(document.forms[0].nameinput.value)//returne value dyale input
+
+
+        //innerhtml       textcontent 
+        let myElement1 = document.querySelector(".is");//class li andha  name .is
+        console. log(myElement1 . innerHTHL) ; // returner les balise kolchi li wst dike class
+        console. log(myElement1. textContent);//returner just text ila kan chi balise katna9zo
+        
+
+
+
+        document.images[0].src = "https://google. com";//change image 
+        document.images[0].alt = "Alternate"//change at image 
+        document.images[0] .title = "Picture"//change tiitle 
+        document.images[0].id = "pic"//darna liha id smito pic
+        document.inages[0]. className = "pic"//drt liha class smito pic
+
+
+
+
+
+        //attribut 
+        //_______________________________________________
+        // Dom [Check Aitributes]
+        // element.attributes          returne list tout les attributes li kaynine  fdike balise
+        // element.hasattribute         if ( myp.hasAttribute ("attribut") ) - {console.log ("found") ;
+        // element.hasattributes
+        // element.removeattribute
+        //_______________________________________________
+        let link=document.querySelector(".link")//returne link 
+            link.getAttribute("href")// value the href ila drna chi atribut kher ayrje3 lina value dyalo
+            link.setAttribute("nameatribut","valeu li bkhina ndiro")//changina f value dyale attribut wila ga3ma kan kayzido liya
+
+
+        //append
+        let div = document.createElement("div")
+        div.append("Some text")//<div>some text</div>
+
+
+        // Before, After, Prepend, Append, Remove
+        let element4 = document.getElementById ("div") ;
+        let createdP = document.createElement ( " p " ) ;
+        element.after ( createdP) ;//zide lina hade element p ba3de div
+              //before
+              //Prepend    kat zed lina 9bel bhale before
+              //append      ''  ''    ''   ''  ''  after
+        element.remove();//suprimer elements div 
+
+
+
+
+        
+        //appendchild
+        let myelemetns=document.createElement("div");//creat div o stockitha f variable 
+            document.body.appendChild(myelemetns)//div zdtha fel page 
+        let myh2=document.createTextNode("this s my div ")//text li ankteb fdive 
+            myelemetns.appendChild(myh2)//text 7tito fdive 
+            
+        //__________________________________________________
+        let myElement = document.queryselector("div");
+            console.log(myElement) ;// returne balise div et content 
+            console.log(myELement.children);//returner element in div 
+            console.log(myElement.children[0]);//returne premier element 
+            console.log(myElement.childNodes);//returne tout content list  li wst div o text 
+            console.log(myELement.childNodes[0]);
+            console.log(myElement.firstChild);// returne awl 7aja fdiv swa comment swa text swa element
+            console.log(myElement.lastChild);// returne akhir 7aja fdiv swa comment swa text swa element
+
+
+
+
+
+
+
+
+            // -DOM . [ Events ]
+            // -Use Events On HTML
+            // - Use Events On - JS
+            // onclick
+            // oncontextmenu    // affiche le menu khasa bihe 
+            // onmouseenter //infois n7ete lmouse dire 
+            // onmouseleave
+            // onload
+            // onscroll
+            // onresize
+            // onfocus
+            // onblur      sike input ila 3mrtha osalit manha 3ade kay excutez dakchi li bkhit
+            // onsubmit
+            //exemple
+            let mybtn =document.getElementById("nameid");
+            mybtn.onclick=function(){*/traitment*/}
+
+
+
+
+
+            //validation EVENTES
+            // document. links[0].onclick = function (event) {
+            // console. log(event);
+            // event.preventDefault();//prevendefault dake submit bhala ga3ma b9ate khdama
+
+            //DOM [events simulation]
+            //onclick________focus____________onblur
+
+
+
+
+
+
+
+
+            // DOM  [ Class List ]
+            // classList
+            // length
+            // contains
+            // item ( index )
+            // add
+            // remove
+            // toggle
+            // exemple:<div class="test show name mohcine my-div"></div>
+            let element = document.getElementById ( "my-div") ;
+            console.log ( element.classList ) ;//returne list dyale class li andna [test show name mohcine my-div]
+            console.log ( typeof element.classList ) ;//objet
+            console.log ( element.classList.contains ( " osama " ) ) ;//false
+            console.log ( element.classList.contains ( " show " ) ) ;//true
+            console.log ( element.classList.item ( " 3 " ) ) ;//mohcine
+            //remov
+            element.onclick = function ( ) {
+            element.classList.remove ( " one " , " three " ) ; } ;//suprimer les class one and three
+            //add
+            element.onclick = function ( ) {
+            element.classList.add ( " one " , " three " ) ; } ;//ajouter on and three
+
+
+
+
+
+
+
+
+            // -DOM . [ CSS ]
+            //  style
+            //  cssText
+            //  removeProperty ( propertyName ) [ Inline , Stylesheet ]
+            // -setProperty ( propertyName , value , priority )
+            let element = document.getElementById ( " my - div " ) ;
+            element.style.color = " red " ;//drna l div color red
+            element.style.fontweight = " bold " ;
+            element.style.cssText = " font - weight : bold ; color : green ; opacity : 0.9 " ;//simple syntaxe 
+            element.style.removeProperty ( " color " ) ;
+            element.style.setProperty ( " font - size " , " 40px " , " important " ) ;
+
+
+
+
+            
+    </script>
+
